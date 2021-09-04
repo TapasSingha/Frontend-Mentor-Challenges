@@ -25,13 +25,6 @@
       font-family:'Lexend Deca', sans-serif;
       font-weight:400;
     }
-    @media screen and (min-width:900px){
-      body{
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-      }
-    }
 
     /*============SPECIFIC STYLE=================*/
     section{
@@ -45,24 +38,8 @@
       margin-right:40px;
       margin-left:40px;
     }
-    @media screen and (max-width:960px){
-      section{
-        height:412px;
-      }
-      section:not(:first-of-type){
-        margin-top:0;
-      }
-      section:first-of-type{
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        border-bottom-left-radius: 0;
-      }
-    section:last-of-type{
-      border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        border-top-right-radius: 0;
-      }
-    }
+    
+
     section:first-of-type{
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
@@ -90,13 +67,7 @@
       display:flex;
       justify-content:center;
     }
-    @media screen and (max-width:960px){
-      main{
-        flex-direction:column;
-        align-items:center;
-      }
-    }
-    
+
     .car-icon{
       margin-top:40px;
     }
@@ -156,6 +127,36 @@
     footer a:hover, footer a:focus, footer a:active{
       text-decoration: underline goldenrod;
       color:gray;
+    }
+
+    @media screen and (max-width:960px){
+      body{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+      }
+
+      main{
+        flex-direction:column;
+        align-items:center;
+      }
+
+      section{
+        height:412px;
+      }
+      section:not(:first-of-type){
+        margin-top:0;
+      }
+      section:first-of-type{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+      }
+    section:last-of-type{
+      border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 0;
+      }
     }
   </style>
 </head>
