@@ -10,7 +10,11 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    /*=============COMMON STYLE==================*/
     @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
     html{
       background-color:#fff;
       font-size:15px;
@@ -22,28 +26,15 @@
       font-family:'Lexend Deca', sans-serif;
       font-weight:400;
     }
-    h1{
-      font-family: 'Big Shoulders', sans-serif;
-      text-transform:uppercase;
-      font-weight:700;
-      margin-top:29px; /*29+7px from the h2 itself = 36px*/
-      color:hsl(0, 0%, 95%);
-      font-size:30px;
-      font-stretch:ultra-condensed;
+    @media screen and (min-width:900px){
+      body{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+      }
     }
-    p{
-      margin-top:29px;
-      line-height:1.4;
-    }
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
 
-    
-    main{
-      display:flex;
-      justify-content:center;
-    }
-    
+    /*============SPECIFIC STYLE=================*/
     section{
       width:306px;
       height:500px;
@@ -51,24 +42,13 @@
       color:hsla(0, 0%, 100%, 0.75);
       position:relative;
     }
+    section >*{
+      margin-right:40px;
+      margin-left:40px;
+    }
     @media screen and (max-width:960px){
       section{
         height:412px;
-      }
-    }
-    section:first-of-type{
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-      }
-    section:last-of-type{
-      border-top-right-radius: 15px;
-      border-bottom-right-radius: 15px;
-    }
-
-    @media screen and (max-width:960px){
-      main{
-        flex-direction:column;
-        align-items:center;
       }
       section:not(:first-of-type){
         margin-top:0;
@@ -84,17 +64,40 @@
         border-top-right-radius: 0;
       }
     }
-    @media screen and (min-width:900px){
-      body{
-        display:flex;
+    section:first-of-type{
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+    section:last-of-type{
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+    h1{
+      font-family: 'Big Shoulders', sans-serif;
+      text-transform:uppercase;
+      font-weight:700;
+      margin-top:29px; /*29+7px from the h2 itself = 36px*/
+      color:hsl(0, 0%, 95%);
+      font-size:30px;
+      font-stretch:ultra-condensed;
+    }
+    p{
+      margin-top:29px;
+      line-height:1.4;
+    }
+        
+    main{
+      display:flex;
+      justify-content:center;
+    }
+    @media screen and (max-width:960px){
+      main{
         flex-direction:column;
-        justify-content:center;
+        align-items:center;
       }
     }
-    section >*{
-      margin-right:40px;
-      margin-left:40px;
-    }
+    
     .car-icon{
       margin-top:40px;
     }
@@ -115,37 +118,34 @@
     section:first-of-type{
       background-color:hsl(31, 77%, 52%);
     }
-    section:first-of-type button{
-      color:hsl(31, 77%, 52%);
-    }
-
     section:nth-of-type(2){
       background-color:hsl(184, 100%, 22%);
     }
-    section:nth-of-type(2) button{
-      color:hsl(184, 100%, 22%);
-    }
-    
     section:nth-of-type(3){
       background-color:hsl(179, 100%, 13%);
+    }
+    
+    section:first-of-type button{
+      color:hsl(31, 77%, 52%);
+    } 
+    section:nth-of-type(2) button{
+      color:hsl(184, 100%, 22%);
     }
     section:nth-of-type(3) button{
       color:hsl(179, 100%, 13%);
     }
     
-    button:hover, button:active, button:focus{
-      background-color: initial;
-      border: 2px solid hsl(0, 0%, 95%);
-      color:hsla(0, 0%, 100%, 0.75);
-
-    } 
     section button{
       padding: 16px 40px;
       font-weight:bold;
     }
-    section button:hover{
+    
+    section button:hover, section button:active, section button:focus{
       color:hsla(0, 0%, 100%, 0.75);
+      background-color: initial;
+      border: 2px solid hsl(0, 0%, 95%);
     }
+
     footer{
       display:flex;
       flex-direction:column;
@@ -154,9 +154,10 @@
       padding:1rem;
       padding-right:0;
     }
-
-    
-    
+    footer a:hover, footer a:focus, footer a:active{
+      text-decoration: underline goldenrod;
+      color:gray;
+    }
   </style>
 </head>
 <body>
