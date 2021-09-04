@@ -6,7 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | 3-column preview card component</title>
+  <title>Frontend Mentor Challenge | 3-column preview card component  </title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -29,9 +29,7 @@
       margin-top:29px; /*29+7px from the h2 itself = 36px*/
       color:hsl(0, 0%, 95%);
       font-size:30px;
-      font-variant: ultra-condensed;
-      -moz-font-variant:ultra-condensed;
-      letter-spacing:-1px;
+      font-stretch:ultra-condensed;
     }
     p{
       margin-top:29px;
@@ -40,6 +38,7 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
 
+    
     main{
       display:flex;
       justify-content:center;
@@ -65,6 +64,7 @@
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
     }
+
     @media screen and (max-width:960px){
       main{
         flex-direction:column;
@@ -102,33 +102,56 @@
       text-decoration:none;
       color:black;
       font-weight:bold;
+      padding: 16px 40px;
     }
     button{
-      padding: 20px 48px;
+      padding: 16px 0px;
       background-color:hsl(0, 0%, 95%);
       border-radius:30px;
       border:none;
       position:absolute;
-      bottom:40px;
+      bottom:50px;
     }
     section:first-of-type{
-      background-color:hsl(31, 77%, 52%);;
+      background-color:hsl(31, 77%, 52%);
     }
     section:first-of-type a{
-      color:hsl(31, 77%, 52%);;
+      color:hsl(31, 77%, 52%);
     }
+
     section:nth-of-type(2){
       background-color:hsl(184, 100%, 22%);
     }
     section:nth-of-type(2) a{
       color:hsl(184, 100%, 22%);
     }
+    
     section:nth-of-type(3){
       background-color:hsl(179, 100%, 13%);
     }
     section:nth-of-type(3) a{
       color:hsl(179, 100%, 13%);
     }
+    
+    button:hover, button:active, button:focus{
+      background-color: initial;
+      border: 2px solid hsl(0, 0%, 95%);
+      color:hsla(0, 0%, 100%, 0.75);
+
+    } 
+    section a:hover{
+      color:hsla(0, 0%, 100%, 0.75);
+    }
+    footer{
+      display:flex;
+      flex-direction:column;
+
+    }
+    footer a{
+      padding:1rem;
+      padding-right:0;
+    }
+    
   </style>
 </head>
 <body>
@@ -154,11 +177,9 @@
     </section>
   </main>
   
-  <footer>
-    <div class="attribution">
-      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.</p>
-    </div>
+  <footer class="attribution">
+    <p>Challenge by&colon; <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      <br>Coded by &colon; <a href="https://github.com/TapasSingha" target="_blank">Tapas Singha</a>.</p>
   </footer>
 </body>
 </html>
