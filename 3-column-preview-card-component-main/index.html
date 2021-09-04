@@ -23,7 +23,19 @@
       font-weight:400;
     }
     h2{
-      font-family: 'Lexend Deca', sans-serif;
+      font-family: 'Big Shoulders', sans-serif;
+      text-transform:uppercase;
+      font-weight:700;
+      margin-top:29px; /*29+7px from the h2 itself = 36px*/
+      color:hsl(0, 0%, 95%);
+      font-size:30px;
+      font-variant: ultra-condensed;
+      -moz-font-variant:ultra-condensed;
+      letter-spacing:-1px;
+    }
+    p{
+      margin-top:29px;
+      line-height:1.4;
     }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -36,8 +48,14 @@
     section{
       width:306px;
       height:500px;
-      border:solid red;
       margin-top:55px;
+      color:hsla(0, 0%, 100%, 0.75);
+      position:relative;
+    }
+    @media screen and (max-width:960px){
+      section{
+        height:412px;
+      }
     }
     section:first-of-type{
         border-top-left-radius: 15px;
@@ -66,12 +84,50 @@
         border-top-right-radius: 0;
       }
     }
-    @media screen and (min-width:90px){
+    @media screen and (min-width:900px){
       body{
         display:flex;
         flex-direction:column;
         justify-content:center;
       }
+    }
+    section >*{
+      margin-right:40px;
+      margin-left:40px;
+    }
+    .car-icon{
+      margin-top:40px;
+    }
+    a{
+      text-decoration:none;
+      color:black;
+      font-weight:bold;
+    }
+    button{
+      padding: 20px 48px;
+      background-color:hsl(0, 0%, 95%);
+      border-radius:30px;
+      border:none;
+      position:absolute;
+      bottom:40px;
+    }
+    section:first-of-type{
+      background-color:hsl(31, 77%, 52%);;
+    }
+    section:first-of-type a{
+      color:hsl(31, 77%, 52%);;
+    }
+    section:nth-of-type(2){
+      background-color:hsl(184, 100%, 22%);
+    }
+    section:nth-of-type(2) a{
+      color:hsl(184, 100%, 22%);
+    }
+    section:nth-of-type(3){
+      background-color:hsl(179, 100%, 13%);
+    }
+    section:nth-of-type(3) a{
+      color:hsl(179, 100%, 13%);
     }
   </style>
 </head>
@@ -79,16 +135,22 @@
   <header></header>
   <main>
     <section>
+      <img  class="car-icon" src="images/icon-sedans.svg" alt="sedan icon">
       <h2>Sedans</h2>
       <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.</p>
+      <button><a href="#">Learn More</a></button>
     </section>
     <section>
+      <img  class="car-icon" src="images/icon-suvs.svg" alt="suv car  icon">
       <h2>SUVs</h2>
       <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation  and off-road adventures.</p>
+      <button><a href="#">Learn More</a></button>
     </section>
     <section>
+      <img  class="car-icon" src="images/icon-luxury.svg" alt="luxary car icon">
       <h2>Luxury</h2>
       <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.</p>
+      <button><a href="#">Learn More</a></button>
     </section>
   </main>
   
