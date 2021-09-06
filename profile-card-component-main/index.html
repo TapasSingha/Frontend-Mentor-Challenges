@@ -14,9 +14,6 @@
     .attribution a { color: hsl(228, 45%, 44%); }
 
     html{
-      
-    }
-    html{
       background-image:
         url(images/bg-pattern-top.svg),
         url(images/bg-pattern-bottom.svg);
@@ -28,46 +25,106 @@
     }
     body{
       min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
     }
-
+    body, body > *{
+      outline:1px solid blue;
+    }
 
     img{
       max-width:100%;
     }
-    /*
-    @media screen and (max-width:800px){
-      html{
-        background-position: left -346px top -350px, right -364px bottom -250px;
-        background-attachment: fixed;
-        background-size:contain;
+
+
+    main{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    #profile-card{
+      min-width:458px;
+      height:490px; /*width to height ratio 1.07*/
+      outline:1px solid red;
+      margin:25px;
+      display:flex;
+      flex-direction:column;
+      border-radius:15px;
+    }
+    
+    #top-bg{
+      background:url(images/bg-pattern-card.svg);
+      min-height:38.9546%;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+    }
+    #profile-text{
+      background-color:#fff;
+      min-height:37.32%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+    }
+    #profile-data{
+      min-height:23.72%;
+      background-color:#fff;
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+      border-top:2px solid #eaeaea;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    
+
+    @media screen and (max-width:520px){
+      #profile-card{
+        min-width:324px;
+        height:375px;
+      }
+      #top-bg{
+      min-height:37.82%;
+      }
+      #profile-text{
+      min-height:38.7756%;
+      }
+      #profile-data{
+      min-height:23.40%;
       }
     }
-    @media screen and (max-width:650px){
-      html{
-        background-position: left -446px top -400px, right -430px bottom -400px;
-        background-attachment: fixed;
-        background-size:cover;
-      }
-    }
-    */
   </style>
 </head>
 <body>
-  Victor Crest
-  26
-  London
+  <main>
+    <div id="profile-card">
+      <div id="top-bg">
+        
+      </div>
+      <div id="profile-text">
+        <h1>Victor Crest</h1>
+        <p>26</p>
+        <p>London</p>
+      </div>
+      <div id="profile-data">
+        80K
+        Followers
 
-  80K
-  Followers
+        803K
+        Likes
 
-  803K
-  Likes
-
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        1.4K
+        Photos
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
 </body>
 </html>
