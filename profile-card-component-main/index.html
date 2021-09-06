@@ -20,12 +20,10 @@
       background-image:
         url(images/bg-pattern-top.svg),
         url(images/bg-pattern-bottom.svg);
-      background-repeat: no-repeat;
-      background-position: left -346px top -450px, right -264px bottom -550px; /*first image 70% into the viewport*/
+      /*background-position: left -346px top -450px, right -264px bottom -550px; first image 70% into the viewport*/
+      background-position: bottom 44vh right 58vw, top 44vh left 58vw;
+      background-repeat: no-repeat; 
       background-color:#1ba1ad;
-      background-size:contain;
-      background-origin: border-box;   
-
       /*Best practice: Always place background-image highr in the source-code, before background-color*/
     }
     body{
@@ -36,6 +34,7 @@
     img{
       max-width:100%;
     }
+    /*
     @media screen and (max-width:800px){
       html{
         background-position: left -346px top -350px, right -364px bottom -250px;
@@ -50,6 +49,7 @@
         background-size:cover;
       }
     }
+    */
   </style>
 </head>
 <body>
