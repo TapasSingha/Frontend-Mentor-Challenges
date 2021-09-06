@@ -18,8 +18,12 @@
         url(images/bg-pattern-top.svg),
         url(images/bg-pattern-bottom.svg);
       background-repeat: no-repeat;
-      background-position: -15vw -45vh, 55vw 60vh;
+      background-position: 
+        /*left 20px top 10px, right 20px bottom 10px;*/
+        left -450px top -450px, right -450px bottom -450px;
+        /*-15vw -45vh, 55vw 60vh;*/
       background-color:#1ba1ad;
+      background-size:contain;
       background-origin: border-box;   
 
       /*Best practice: Always place background-image highr in the source-code, before background-color*/
