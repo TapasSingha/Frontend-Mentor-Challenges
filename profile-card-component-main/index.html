@@ -14,14 +14,14 @@
     .attribution a { color: hsl(228, 45%, 44%); }
 
     html{
+      
+    }
+    html{
       background-image:
         url(images/bg-pattern-top.svg),
         url(images/bg-pattern-bottom.svg);
       background-repeat: no-repeat;
-      background-position: 
-        /*left 20px top 10px, right 20px bottom 10px;*/
-        left -450px top -450px, right -450px bottom -450px;
-        /*-15vw -45vh, 55vw 60vh;*/
+      background-position: left -346px top -450px, right -264px bottom -550px; /*first image 70% into the viewport*/
       background-color:#1ba1ad;
       background-size:contain;
       background-origin: border-box;   
@@ -31,8 +31,24 @@
     body{
       min-height:100vh;
     }
+
+
     img{
       max-width:100%;
+    }
+    @media screen and (max-width:800px){
+      html{
+        background-position: left -346px top -350px, right -364px bottom -250px;
+        background-attachment: fixed;
+        background-size:contain;
+      }
+    }
+    @media screen and (max-width:650px){
+      html{
+        background-position: left -446px top -400px, right -430px bottom -400px;
+        background-attachment: fixed;
+        background-size:cover;
+      }
     }
   </style>
 </head>
