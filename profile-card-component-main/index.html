@@ -11,8 +11,16 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     /* 
+
+    FrontendMentor challenge page-
+    https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ
+
     GitHub repo link-
     https://github.com/TapasSingha/Frontend-Mentor-Challenges/tree/main/profile-card-component-main 
+
+    Interactive codepen link-
+    https://codepen.io/TapasSingha/pen/powNaMb
+
 
 
   */
@@ -117,13 +125,17 @@
       border-top-left-radius: inherit;
       border-top-right-radius: inherit;
       position:relative;
+      /*ADD display:flex; justify-content... */
+      display:flex;
+      justify-content:center;
     }
     #top-bg img{
       border-radius:50%; 
       border:6px solid #fff; 
       position:absolute; 
-      top:150px; 
-      left:177px;
+      /*NEW VALUE because of the new height. 10:15pm, 09/09/2021*/
+      top:122px; 
+      /*Omitted lposition left as it had no use with display flex being used.*/
       z-index:1;
     } 
     .middle{
@@ -173,12 +185,36 @@
       border-bottom-left-radius: inherit;
       border-bottom-right-radius: inherit;
       border-top:2px solid #eaeaea;
+
       display:flex;
       align-items:center;
       justify-content:center;
       font-size:18px;
     }
     
+    /*==========WORKING NOW===========*/
+    #profile-text h1{
+        font-size:24px;
+    }
+    #profile-text > p{
+      font-size:21px;
+    }
+    #top-bg img{
+      width:126px;
+      /*NEW VALUE because of the new height. 10:15pm, 09/09/2021*/
+      top:124px;
+    } 
+
+    #profile-data p{
+      margin:0 30px;
+      font-size:18px;
+    }
+    .profile-figures{
+      font-size:24px;
+      font-weight:bold;
+    }
+/*================================*/
+
 
     @media screen and (max-width:520px){
       #profile-card{
@@ -189,9 +225,10 @@
         min-height:37.82%;
       }
       #top-bg img{
+        width:28.79%; /*or 107.09px*/
         position:absolute; 
         top:80px; 
-        left:109px;
+        /*DEL position left. It is obsolete*/
       } 
       .middle{
         min-height: 38.7756%;
@@ -230,14 +267,18 @@
         </div>
       </div>
       <div id="profile-data">
-        80K
-        Followers
-
-        803K
-        Likes
-
-        1.4K
-        Photos
+        <p>
+          <span class="profile-figures">80K</span>
+          <br>
+          Followers</p>
+        <p>
+          <span class="profile-figures">803K</span>
+          <br>
+          Likes</p>
+        <p>
+          <span class="profile-figures">1.4K</span>
+          <br>
+          Photos</p>
       </div>
     </div>
   </main>
